@@ -17,6 +17,8 @@
 /* Undefine _GNU_SOURCE so that this compilation unit can access the
  * posix version of strerror_r */
 #undef _GNU_SOURCE
+#define _POSIX_SOURCE
+#define _POSIX_C_SOURCE 200112L
 #include <string.h>
 
 namespace android {
