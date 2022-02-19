@@ -23,6 +23,10 @@
 #include <optional>
 #include <string>
 
+#if !defined(__BUILD_FOR_HOST)
+#define __BIONIC__
+#endif
+
 struct prop_info;
 
 namespace android {
@@ -109,4 +113,8 @@ static inline int HwTimeoutMultiplier() {
 extern "C" int __system_property_set(const char*, const char*);
 /** Implementation detail. */
 extern "C" int __system_property_get(const char*, char*);
+#endif
+
+#if !defined(__BUILD_FOR_HOST)
+#undef __BIONIC__
 #endif

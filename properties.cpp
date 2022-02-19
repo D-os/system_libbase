@@ -16,6 +16,10 @@
 
 #include "android-base/properties.h"
 
+#if !defined(__BUILD_FOR_HOST)
+#define __BIONIC__
+#endif
+
 #if defined(__BIONIC__)
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/system_properties.h>
