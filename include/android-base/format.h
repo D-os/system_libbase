@@ -16,6 +16,7 @@
 
 #pragma once
 
+#define FMT_CONSTEVAL
 // We include fmtlib here as an alias, since libbase will have fmtlib statically linked already.
 // It is accessed through its normal fmt:: namespace.
 #pragma clang diagnostic push
